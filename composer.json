@@ -1,0 +1,14 @@
+{
+    "name": "hshn/class-matcher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shota Hoshino",
+            "email": "lga0503@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "Hshn\\ClassMatcher\\": "" }
+    }
+}
