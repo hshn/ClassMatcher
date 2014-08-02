@@ -1,6 +1,8 @@
 ClassMatcher
 ============
 
+[![Build Status](https://travis-ci.org/hshn/ClassMatcher.svg?branch=travis)](https://travis-ci.org/hshn/ClassMatcher)
+
 ## Usage
 
 ```php
