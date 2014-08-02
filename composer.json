@@ -10,5 +10,10 @@
     "require": {},
     "autoload": {
         "psr-4": { "Hshn\\ClassMatcher\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
     }
 }
