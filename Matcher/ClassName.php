@@ -12,21 +12,14 @@ class ClassName implements MatcherInterface
     /**
      * @var string
      */
-    private $class;
-
-    /**
-     * @var bool
-     */
-    private $includesSubClass;
+    protected $class;
 
     /**
      * @param string $class
-     * @param bool   $includesSubClass
      */
-    public function __construct($class, $includesSubClass = false)
+    public function __construct($class)
     {
         $this->class = $class;
-        $this->includesSubClass = $includesSubClass;
     }
 
     /**
@@ -34,14 +27,6 @@ class ClassName implements MatcherInterface
      */
     public function matches($class)
     {
-        if ($class === $this->class) {
-            return true;
-        }
-
-        if (!$this->includesSubClass) {
-            return false;
-        }
-
-        return is_subclass_of($class, $this->class);
+        return $class === $this->class;
     }
 }
