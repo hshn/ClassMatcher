@@ -2,9 +2,9 @@
 
 namespace Hshn\ClassMatcher\Tests\Matcher;
 
-use Hshn\ClassMatcher\Matcher\OrMatcher;
+use Hshn\ClassMatcher\Matcher\LogicalOr;
 
-class OrMatcherTest extends MatcherTestCase
+class LogicalOrTest extends MatcherTestCase
 {
     /**
      * @test
@@ -16,7 +16,7 @@ class OrMatcherTest extends MatcherTestCase
             return $this->getMatcher($childResult);
         }, $childResults);
 
-        $matcher = new OrMatcher($matchers);
+        $matcher = new LogicalOr($matchers);
 
         $this->assertEquals($expectedResult, $matcher->matches('foo'));
     }

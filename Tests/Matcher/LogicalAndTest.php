@@ -2,9 +2,9 @@
 
 namespace Hshn\ClassMatcher\Tests\Matcher;
 
-use Hshn\ClassMatcher\Matcher\AndMatcher;
+use Hshn\ClassMatcher\Matcher\LogicalAnd;
 
-class AndMatcherTest extends MatcherTestCase
+class LogicalAndTest extends MatcherTestCase
 {
     /**
      * @test
@@ -16,7 +16,7 @@ class AndMatcherTest extends MatcherTestCase
             return $this->getMatcher($childResult);
         }, $childResults);
 
-        $matcher = new AndMatcher($matchers);
+        $matcher = new LogicalAnd($matchers);
 
         $this->assertEquals($expectedResult, $matcher->matches('foo'));
     }

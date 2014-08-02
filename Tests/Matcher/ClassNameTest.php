@@ -2,9 +2,9 @@
 
 namespace Hshn\ClassMatcher\Tests\Matcher;
 
-use Hshn\ClassMatcher\Matcher\ClassNameMatcher;
+use Hshn\ClassMatcher\Matcher\ClassName;
 
-class ClassNameMatcherTest extends \PHPUnit_Framework_TestCase
+class ClassNameTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
@@ -12,7 +12,7 @@ class ClassNameMatcherTest extends \PHPUnit_Framework_TestCase
      */
     public function testMatches($expectedResult, $class, $testClass, $includesSubclasses = true)
     {
-        $matcher = new ClassNameMatcher($class, $includesSubclasses);
+        $matcher = new ClassName($class, $includesSubclasses);
         $this->assertEquals($expectedResult, $matcher->matches($testClass));
     }
 

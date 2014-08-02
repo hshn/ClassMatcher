@@ -7,7 +7,7 @@ use Hshn\ClassMatcher\MatcherInterface;
 /**
  * @author Shota Hoshino <lga0503@gmail.com>
  */
-class OrMatcher implements MatcherInterface
+class LogicalOr implements MatcherInterface
 {
     /**
      * @var \Hshn\ClassMatcher\MatcherInterface[]
