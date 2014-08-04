@@ -7,7 +7,7 @@ class ClassMatcher
     /**
      * @return ClassMatcherBuilder
      */
-    static public function createBuilder()
+    public static function createBuilder()
     {
         return new ClassMatcherBuilder();
     }
