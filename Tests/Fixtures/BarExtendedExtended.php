@@ -1,8 +1,10 @@
 <?php
 
+
 namespace Hshn\ClassMatcher\Tests\Fixtures;
 
-interface BarInterface
+
+class BarExtendedExtended extends BarExtended
 {
 
 }
