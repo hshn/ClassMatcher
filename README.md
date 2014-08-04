@@ -13,11 +13,15 @@ use Hshn\ClassMatcher\ClassMatcher;
 $builder = ClassMatcher::createBuilder();
 
 $matcher = $builder->logicalOr([
-    $builder->isInstanceOf('Foo'),
-    $builder->className('Bar')
+    $builder->equalsTo('Foo'),
+    $builder->implemented('FooInterface'),
+    $builder->extended('Foo'),
+    $builder->logicalAnd([
+        $builder->anything()
+    ]),
 ]);
 
-if ($matcher->matches($objectOrClass)) {
+if ($matcher->matches('FooExtended')) {
 
 } else {
 

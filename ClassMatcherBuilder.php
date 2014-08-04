@@ -3,9 +3,10 @@
 namespace Hshn\ClassMatcher;
 
 use Hshn\ClassMatcher\Matcher\Anything;
-use Hshn\ClassMatcher\Matcher\IsInstanceOf;
+use Hshn\ClassMatcher\Matcher\EqualsTo;
+use Hshn\ClassMatcher\Matcher\Extended;
+use Hshn\ClassMatcher\Matcher\Implemented;
 use Hshn\ClassMatcher\Matcher\LogicalAnd;
-use Hshn\ClassMatcher\Matcher\ClassName;
 use Hshn\ClassMatcher\Matcher\LogicalNot;
 use Hshn\ClassMatcher\Matcher\LogicalOr;
 
@@ -44,21 +45,31 @@ class ClassMatcherBuilder
     /**
      * @param string $class
      *
-     * @return ClassName
+     * @return EqualsTo
      */
-    public function className($class)
+    public function equalsTo($class)
     {
-        return new ClassName($class);
+        return new EqualsTo($class);
     }
 
     /**
-     * @param string $classOrInterface
+     * @param string $class
      *
-     * @return IsInstanceOf
+     * @return Extended
      */
-    public function isInstanceOf($classOrInterface)
+    public function extended($class)
     {
-        return new IsInstanceOf($classOrInterface);
+        return new Extended($class);
+    }
+
+    /**
+     * @param string $class
+     *
+     * @return Implemented
+     */
+    public function implemented($class)
+    {
+        return new Implemented($class);
     }
 
     /**
