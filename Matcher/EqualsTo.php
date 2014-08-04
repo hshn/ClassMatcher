@@ -7,19 +7,19 @@ use Hshn\ClassMatcher\MatcherInterface;
 /**
  * @author Shota Hoshino <lga0503@gmail.com>
  */
-class ClassName implements MatcherInterface
+class EqualsTo implements MatcherInterface
 {
     /**
      * @var string
      */
-    protected $class;
+    private $className;
 
     /**
-     * @param string $class
+     * @param string $className
      */
-    public function __construct($class)
+    public function __construct($className)
     {
-        $this->class = $class;
+        $this->className = $className;
     }
 
     /**
@@ -27,6 +27,6 @@ class ClassName implements MatcherInterface
      */
     public function matches($class)
     {
-        return $class === $this->class;
+        return $this->className === $class;
     }
 }
